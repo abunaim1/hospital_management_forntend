@@ -4,52 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospital</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Boostrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- Swiftty -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous" />
   </head>
   <body>
     <header>
-        <!-- nav container -->
+      <!-- nav container -->
       <nav class="d-flex justify-content-around align-items-center p-3">
         <div class="logo-container d-flex align-items-center gap-2">
           <img src="./images/stethoscope 1.png" alt="logo" />
           <h3>Smart Clinic</h3>
         </div>
         <div class="menu-container d-flex gap-3">
-            <li class="manu">Home</li>
-            <li class="manu">Services</li>
-            <li class="manu">Contact</li>
-            <li class="manu">Login</li>
+          <li class="manu">Home</li>
+          <li class="manu">Services</li>
+          <li class="manu">Contact</li>
+          <li class="manu">Login</li>
         </div>
       </nav>
       <!-- banner container -->
       <div class="banner-container">
         <h3><span class="fs-5">hlw, Mr</span> Abu Naim</h3>
         <div class="banner rounded">
-            <div class="banner-left">
-                <p class="display-3">Providing Quality <br> Healthcare</p>
-                <p>Our approach to healthcare is rooted in a deep respect for the individual needs and preferences of each patient. We take the time to listen attentively to your concerns, answer your questions, and develop personalized treatment plans that align with your goals and priorities.
-                </p>
-            </div>
-            <div class="banner-right">
-                <img src="./images/doc.png" alt="">
-            </div>
+          <div class="banner-left">
+            <p class="display-3">
+              Providing Quality <br />
+              Healthcare
+            </p>
+            <p>
+              Our approach to healthcare is rooted in a deep respect for the individual needs and preferences of each patient. We take the
+              time to listen attentively to your concerns, answer your questions, and develop personalized treatment plans that align with
+              your goals and priorities.
+            </p>
+          </div>
+          <div class="banner-right">
+            <img src="./images/doc.png" alt="" />
+          </div>
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- add services -->
+      <div class="service-heading">
+        <h2>Services We Provide</h2>
+        <p>
+          As your trusted healthcare partner, we offer a comprehensive range of medical services tailored to meet your unique needs. From
+          preventive care and routine check-ups to specialized treatments and advanced procedures.
+        </p>
+      </div>
+      <div class="service-container">
+        <div
+          class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+        >
+          <ul id="service-container" class="slider-container py-4">
+          </ul>
+          <button type="button" class="slider-nav" aria-label="Go left"></button>
+          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+          <div class="slider-indicators">
+            <button class="active" aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctors section -->
+    </main>
     <footer></footer>
+
+
+    
     <!-- script file -->
     <script src="./app.js"></script>
+    <!-- Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Swiffty -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
   </body>
 </html>
