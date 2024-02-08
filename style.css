@@ -1,16 +1,36 @@
-*{
-    /* margin: auto; */
+/* navigation part */
+li {
+  list-style: none;
 }
-li{
-    list-style: none;
+nav {
+  background-color: aqua;
 }
-nav{
-    background-color: aqua;
+.manu {
+  font-size: 20px;
 }
-.manu{
-    font-size: 20px;
+.manu:hover {
+  color: white;
+  cursor: pointer;
 }
-.manu:hover{
-    color: white;
-    cursor: pointer;
+
+/* banner part */
+.banner-container {
+
+  width: 1200px;
+  margin: auto;
+  margin-top: 120px;
+}
+.banner {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  background: linear-gradient(to right, aqua, #4b4b4b);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+.banner-right{
+    margin-top: -120px;
 }
