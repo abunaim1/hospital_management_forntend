@@ -1,0 +1,16 @@
+*{
+    /* margin: auto; */
+}
+li{
+    list-style: none;
+}
+nav{
+    background-color: aqua;
+}
+.manu{
+    font-size: 20px;
+}
+.manu:hover{
+    color: white;
+    cursor: pointer;
+}
