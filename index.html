@@ -101,6 +101,38 @@
           <input id="search" class="search" type="search" placeholder="Search.." />
           <button onclick="loadSearch()" class="btn btn-secondary">Search</button>
           <div id="doctors" style="width: 18rem"></div>
+          <div id="nodata">
+            <img src="./images/nodata.png" alt="" />
+          </div>
+          <!-- spinner -->
+          <div id="spinner" class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-heading">
+        <h2>Clients Review About Us</h2>
+        <p>Are you looking for a new doctor but feeling overwhelmed by the choices? Don't worry; you're not alone. Choosing the right healthcare provider is a crucial decision that can have a significant impact on your well-being. </p>
+      </div>
+      <div class="review-container">
+        <div
+          class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+        >
+          <ul id="reviews" class="slider-container py-4">
+
+          </ul>
+          <button type="button" class="slider-nav" aria-label="Go left"></button>
+          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+          <div class="slider-indicators">
+            <button class="active" aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+          </div>
         </div>
       </div>
     </main>

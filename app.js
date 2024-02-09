@@ -6,7 +6,6 @@ const loadServices = () => {
 };
 
 const displaydata = (services) => {
-  //   console.log(services);
   services.forEach((service) => {
     const parent = document.getElementById("service-container");
     const li = document.createElement("li");
@@ -26,12 +25,24 @@ const displaydata = (services) => {
   });
 };
 const loadDoctors = (search) => {
-  console.log(search);
+  document.getElementById("spinner").style.display = "block";
   fetch(` https://testing-8az5.onrender.com/doctor/list/?search=${search ? search : ""}`)
     .then((res) => res.json())
-    .then((data) => displayDoctors(data?.results));
+    .then((data) => {
+      if (data.results.length > 0) {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("nodata").style.display = "none";
+        displayDoctors(data?.results);
+      } else {
+        document.getElementById("doctors").innerHTML = "";
+        document.getElementById("nodata").style.display = "block";
+        document.getElementById("spinner").style.display = "none";
+      }
+    });
 };
+
 const displayDoctors = (doctors) => {
+  document.getElementById("doctors").innerHTML = " ";
   doctors?.forEach((doctor) => {
     const parent = document.getElementById("doctors");
     const div = document.createElement("div");
@@ -56,14 +67,11 @@ const loadDesignation = () => {
   fetch("https://testing-8az5.onrender.com/doctor/designation/")
     .then((res) => res.json())
     .then((data) => {
-      //   console.log(data);
-      const parent = document.getElementById("designation");
       data.forEach((item) => {
+        const parent = document.getElementById("designation");
         const li = document.createElement("li");
         li.classList.add("dropdown-item");
-        li.innerHTML = `
-        <li oncick="loadDoctors("name")">${item.name}</li>
-        `
+        li.innerText = `${item?.name}`;
         parent.appendChild(li);
       });
     });
@@ -78,7 +86,9 @@ const loadSpecialization = () => {
       data.forEach((item) => {
         const li = document.createElement("li");
         li.classList.add("dropdown-item");
-        li.innerText = `${item?.name}`;
+        li.innerHTML = `
+        <li onclick="loadDoctors('${item.name}')" >${item.name}</li>
+        `;
         parent.appendChild(li);
       });
     });
@@ -89,7 +99,30 @@ const loadSearch = () => {
   loadDoctors(value);
 };
 
+const loadReview = () => {
+  fetch("https://smart-care.onrender.com/doctor/reviews/")
+    .then((res) => res.json())
+    .then((data) => displayReview(data));
+};
+
+const displayReview = (reviews) => {
+  const parent = document.getElementById("reviews");
+  reviews.forEach((review) => {
+    const div = document.createElement("div");
+    div.classList.add("review");
+    div.innerHTML = `
+        <img src="./images/girl.png" alt="">
+        <h4>Dr. Abraham Jangali</h4>
+        <h4>${review.rating}</h4>
+        <p>${review.body.slice(0, 200)}</p>
+        <p>Created Time: ${review.created}</p>
+        `;
+    parent.appendChild(div);
+  });
+};
+
 loadServices();
 loadDoctors();
 loadDesignation();
 loadSpecialization();
+loadReview();
