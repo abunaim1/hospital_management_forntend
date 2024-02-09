@@ -65,8 +65,7 @@
         <div
           class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
         >
-          <ul id="service-container" class="slider-container py-4">
-          </ul>
+          <ul id="service-container" class="slider-container py-4"></ul>
           <button type="button" class="slider-nav" aria-label="Go left"></button>
           <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
 
@@ -81,11 +80,30 @@
       </div>
 
       <!-- Doctors section -->
+      <div class="doctors-container">
+        <div class="col-md-4">
+          <div class="d-flex gap-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Designation
+              </button>
+              <ul id="designation" class="dropdown-menu"></ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Specialization
+              </button>
+              <ul id="specialization" class="dropdown-menu"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <input class="search" type="search" placeholder="Search.." /> <button>Search</button>
+          <div id="doctors" style="width: 18rem"></div>
+        </div>
+      </div>
     </main>
     <footer></footer>
-
-
-    
     <!-- script file -->
     <script src="./app.js"></script>
     <!-- Boostrap -->

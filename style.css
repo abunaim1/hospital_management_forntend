@@ -1,3 +1,6 @@
+body{
+    background-color: #efecec;
+}
 /* navigation part */
 li {
   list-style: none;
@@ -45,4 +48,43 @@ nav {
 .service-container{
     width: 1200px;
     margin: auto;
+}
+.doctors-container{
+    display: flex;
+    width: 1400px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+/* doctors list */
+.search{
+   margin-bottom: 30px;
+   width: 80%;
+   padding: 15px;
+   border-radius: 20px;
+   border: 1px solid aqua;
+
+}
+.doctor{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.doctor:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.doctor img{
+    height: 100%;
+    width: 40%;
+    border-radius: 50%;
+}
+.specialization{
+    font-weight: 500;
 }
