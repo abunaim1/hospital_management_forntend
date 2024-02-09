@@ -25,8 +25,9 @@ const displaydata = (services) => {
     parent.appendChild(li);
   });
 };
-const loadDoctors = () => {
-  fetch("https://testing-8az5.onrender.com/doctor/list/")
+const loadDoctors = (search) => {
+  console.log(search);
+  fetch(` https://testing-8az5.onrender.com/doctor/list/?search=${search ? search : ""}`)
     .then((res) => res.json())
     .then((data) => displayDoctors(data?.results));
 };
@@ -55,8 +56,25 @@ const loadDesignation = () => {
   fetch("https://testing-8az5.onrender.com/doctor/designation/")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      //   console.log(data);
       const parent = document.getElementById("designation");
+      data.forEach((item) => {
+        const li = document.createElement("li");
+        li.classList.add("dropdown-item");
+        li.innerHTML = `
+        <li oncick="loadDoctors("name")">${item.name}</li>
+        `
+        parent.appendChild(li);
+      });
+    });
+};
+
+const loadSpecialization = () => {
+  fetch("https://testing-8az5.onrender.com/doctor/specialization/")
+    .then((res) => res.json())
+    .then((data) => {
+      //   console.log(data);
+      const parent = document.getElementById("specialization");
       data.forEach((item) => {
         const li = document.createElement("li");
         li.classList.add("dropdown-item");
@@ -66,23 +84,12 @@ const loadDesignation = () => {
     });
 };
 
-const loadSpecialization = () => {
-    fetch("https://testing-8az5.onrender.com/doctor/specialization/")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        const parent = document.getElementById("specialization");
-        data.forEach((item) => {
-          const li = document.createElement("li");
-          li.classList.add("dropdown-item");
-          li.innerText = `${item?.name}`;
-          parent.appendChild(li);
-        });
-      });
-  };
-
+const loadSearch = () => {
+  const value = document.getElementById("search").value;
+  loadDoctors(value);
+};
 
 loadServices();
 loadDoctors();
 loadDesignation();
-loadSpecialization()
+loadSpecialization();

@@ -62,8 +62,11 @@ nav {
    width: 80%;
    padding: 15px;
    border-radius: 20px;
-   border: 1px solid aqua;
-
+   background-color:cadetblue;
+   border:none;
+}
+.search::placeholder{
+    color: whitesmoke;
 }
 .doctor{
     text-align: center;
