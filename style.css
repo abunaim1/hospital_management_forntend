@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: #efecec;
 }
@@ -122,4 +126,34 @@ nav {
     width: 70px;
     height: 70px;
     border-radius: 50px;
+}
+/* footer */
+
+footer{
+    height: 44vh;
+    width: 100%;
+    background-color:cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-footer{
+    padding-left: 100px;
+}
+
+/* doctor details */
+
+.doc-details-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+.doc-details-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

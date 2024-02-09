@@ -56,7 +56,7 @@ const displayDoctors = (doctors) => {
       ${doctor?.specialization?.map((item) => {
         return `<span class=specialization>${item}</span>`;
       })}
-      <a href="#" class="btn btn-primary">Details</a>
+      <p><a class="text-decoration-none text-light btn btn-secondary mt-4" target="_blank" href="docDetail.html?docId=${doctor.id}">Details</a></p>
     </div>
     `;
     parent.appendChild(div);
