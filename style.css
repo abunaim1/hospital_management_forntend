@@ -157,3 +157,25 @@ footer{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+/* login part */
+.login-container img{
+    width: 60vh;
+}
+.login-container{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+.input{
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px #878282;
+}

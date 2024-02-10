@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Swiftty -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- nav container -->
+    <nav class="d-flex justify-content-around align-items-center p-3">
+        <div class="logo-container d-flex align-items-center gap-2">
+          <img src="./images/stethoscope 1.png" alt="logo" />
+          <h3>Smart Clinic</h3>
+        </div>
+        <div class="menu-container d-flex gap-3">
+          <li class="manu"><a class="text-decoration-none text-dark" target="_blank" href="index.html">Home</a></li>
+          <li class="manu">Services</li>
+          <li class="manu">Contact</li>
+          <li class="manu"><a class="text-decoration-none text-dark" target="_blank" href="login.html">Login</a></li>
+        </div>
+      </nav>
+      <h1 class="text-center mt-5 display-6 text-light w-25 m-auto bg-secondary rounded py-2">Please Login Here</h1>
+    <div class="login-container">
+        
+        <form action="">
+            <input type="email" name="login" id="email" class="input" required placeholder="Type your email" >
+            <input type="password" name="login" id="password" class="input" required placeholder="Type your password">
+            <input class="btn btn-secondary w-100 mt-3" type="submit" value="Login" >
+            <p>Don't have an account?<a href="registration.html">SignUp</a></p>
+        </form>
+        <img src="./images/login.png" alt="login Image">
+    </div>
+    <footer class="row">
+        <div class="col-md-6 px-5">
+            <small>Copyright smartcare © All rights <br> reserved</small>
+            <p class="fw-bolder">Follow Us</p>
+            <img src="./images/LinkedIn.png" alt="">
+            <img src="./images/YouTube.png" alt="">
+            <img src="./images/LinkedIn.png" alt="">
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bolder">Company</h6>
+            <p>About</p>
+            <p>Contacat Us</p>
+            <p>Career</p>
+            <p>Culture</p>
+            <p>Blog</p>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bolder">Support</h6>
+            <p>Getting Start</p>
+            <p>Service</p>
+            <p>Chat Center</p>
+            <p>Report a Blog</p>
+            <p>Server Stutus</p>
+        </div>
+    </footer>
+    <!-- script file -->
+    <script src="./app.js"></script>
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./docDetail.js"></script>
+    <!-- Swiffty -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  </body>
+</html>
+

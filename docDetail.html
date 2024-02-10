@@ -25,10 +25,10 @@
           <h3>Smart Clinic</h3>
         </div>
         <div class="menu-container d-flex gap-3">
-          <li class="manu">Home</li>
+          <li class="manu"><a class="text-decoration-none text-dark" target="_blank" href="index.html">Home</a></li>
           <li class="manu">Services</li>
           <li class="manu">Contact</li>
-          <li class="manu">Login</li>
+          <li class="manu"><a class="text-decoration-none text-dark" target="_blank" href="login.html">Login</a></li>
         </div>
       </nav>
       <!-- banner container -->
@@ -53,55 +53,92 @@
       </div>
     </header>
     <main>
-        <div id="doctor-details"></div>
-        <div class="reviews-heading">
-            <h2>Clients Review About Doctors</h2>
-            <p>Are you looking for a new doctor but feeling overwhelmed by the choices? Don't worry; you're not alone. Choosing the right healthcare provider is a crucial decision that can have a significant impact on your well-being. </p>
+      <div id="doctor-details"></div>
+      <div class="reviews-heading">
+        <h2>Clients Review About Doctors</h2>
+        <p>
+          Are you looking for a new doctor but feeling overwhelmed by the choices? Don't worry; you're not alone. Choosing the right
+          healthcare provider is a crucial decision that can have a significant impact on your well-being.
+        </p>
+      </div>
+      <div class="review-container">
+        <div
+          class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+        >
+          <ul id="doctor-review" class="slider-container py-4"></ul>
+          <button type="button" class="slider-nav" aria-label="Go left"></button>
+          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+          <div class="slider-indicators">
+            <button class="active" aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
           </div>
-          <div class="review-container">
-            <div
-              class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
-            >
-              <ul id="reviews" class="slider-container py-4">
-    
-              </ul>
-              <button type="button" class="slider-nav" aria-label="Go left"></button>
-              <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
-    
-              <div class="slider-indicators">
-                <button class="active" aria-label="Go to slide"></button>
-                <button aria-label="Go to slide"></button>
-                <button aria-label="Go to slide"></button>
-                <button aria-label="Go to slide"></button>
-                <button aria-label="Go to slide"></button>
+        </div>
+      </div>
+      <div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex gap-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="status" id="offline" />
+                  <label class="form-check-label" for="offline"> Offline </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="status" id="online" checked />
+                  <label class="form-check-label" for="online"> Online </label>
+                </div>
+              </div>
+              <div class="modal-body">
+                <input id="symptom" type="text" class="form-control" placeholder="Type your condition" /><br />
+                <select id="doctor-time" class="form-select" aria-label="Default select example">
+                  <option selected>Select Your Time slot</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button onclick="handleAppoinment()" type="button" class="btn btn-primary">Appoinment submit</button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </main>
     <footer class="row">
-        <div class="col-md-6 px-5">
-            <small>Copyright smartcare © All rights <br> reserved</small>
-            <p class="fw-bolder">Follow Us</p>
-            <img src="./images/LinkedIn.png" alt="">
-            <img src="./images/YouTube.png" alt="">
-            <img src="./images/LinkedIn.png" alt="">
-        </div>
-        <div class="col-md-3">
-            <h6 class="fw-bolder">Company</h6>
-            <p>About</p>
-            <p>Contacat Us</p>
-            <p>Career</p>
-            <p>Culture</p>
-            <p>Blog</p>
-        </div>
-        <div class="col-md-3">
-            <h6 class="fw-bolder">Support</h6>
-            <p>Getting Start</p>
-            <p>Service</p>
-            <p>Chat Center</p>
-            <p>Report a Blog</p>
-            <p>Server Stutus</p>
-        </div>
+      <div class="col-md-6 px-5">
+        <small
+          >Copyright smartcare © All rights <br />
+          reserved</small
+        >
+        <p class="fw-bolder">Follow Us</p>
+        <img src="./images/LinkedIn.png" alt="" />
+        <img src="./images/YouTube.png" alt="" />
+        <img src="./images/LinkedIn.png" alt="" />
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bolder">Company</h6>
+        <p>About</p>
+        <p>Contacat Us</p>
+        <p>Career</p>
+        <p>Culture</p>
+        <p>Blog</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bolder">Support</h6>
+        <p>Getting Start</p>
+        <p>Service</p>
+        <p>Chat Center</p>
+        <p>Report a Blog</p>
+        <p>Server Stutus</p>
+      </div>
     </footer>
     <!-- script file -->
     <script src="./app.js"></script>
