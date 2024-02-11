@@ -179,3 +179,18 @@ footer{
     border-radius: 5px;
     box-shadow: 4px 4px 8px #878282;
 }
+
+/* user details */
+.user-info{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* user appoinments */
+.user-appoinments{
+    height: 70vh;
+}

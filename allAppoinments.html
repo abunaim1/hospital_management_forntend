@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>All Appoinments</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Boostrap -->
@@ -28,17 +28,35 @@
         <li class="manu">Services</li>
         <li class="manu">Contact</li>
         <li class="manu"><a class="text-decoration-none text-dark"  href="login.html">Login</a></li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">User</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./userDetails.html">Profile</a></li>
+            <li><a class="dropdown-item" href="./allAppoinments.html">All appoinments</a></li>
+            <li onclick="handlelogOut()">
+              <a class="dropdown-item">logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <h1 class="text-center mt-5 display-6 text-light w-25 m-auto bg-secondary rounded py-2">Please Login Here</h1>
-    <div class="login-container">
-      <form action="">
-        <input type="text" name="login" id="login-username" class="input" required placeholder="Type your username" />
-        <input type="password" name="login" id="login-password" class="input" required placeholder="Type your password" />
-        <input onclick="handleLogin(event)" class="btn btn-secondary w-100 mt-3" type="submit" value="Login" />
-        <p>Don't have an account?<a href="registration.html">SignUp</a></p>
-      </form>
-      <img src="./images/login.png" alt="login Image" />
+    <div class="user-appoinments">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>symptom</th>
+            <th>type</th>
+            <th>status</th>
+            <th>doctor</th>
+            <th>fees</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+         
+        </tbody>
+      </table>
     </div>
     <footer class="row">
       <div class="col-md-6 px-5">
@@ -72,6 +90,7 @@
     <script src="./app.js"></script>
     <script src="./docDetail.js"></script>
     <script src="./auth.js"></script>
+    <script src="./allAppoinments.js"></script>
     <!-- Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

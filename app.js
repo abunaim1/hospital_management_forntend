@@ -56,7 +56,7 @@ const displayDoctors = (doctors) => {
       ${doctor?.specialization?.map((item) => {
         return `<span class=specialization>${item}</span>`;
       })}
-      <p><a class="text-decoration-none text-light btn btn-secondary mt-4" target="_blank" href="docDetail.html?docId=${doctor.id}">Details</a></p>
+      <p><a class="text-decoration-none text-light btn btn-secondary mt-4" href="docDetail.html?docId=${doctor.id}">Details</a></p>
     </div>
     `;
     parent.appendChild(div);
@@ -81,7 +81,6 @@ const loadSpecialization = () => {
   fetch("https://testing-8az5.onrender.com/doctor/specialization/")
     .then((res) => res.json())
     .then((data) => {
-      //   console.log(data);
       const parent = document.getElementById("specialization");
       data.forEach((item) => {
         const li = document.createElement("li");
